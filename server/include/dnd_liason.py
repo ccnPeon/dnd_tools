@@ -73,7 +73,7 @@ class DNDLiason():
             return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 12) * 2)) \
                 + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 8) * 2)) \
-                + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 10) * 2)) \
+                + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 14) * 2)) \
                 + document['properties'] + '\n'
         return return_info
 
