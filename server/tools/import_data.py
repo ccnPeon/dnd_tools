@@ -15,7 +15,7 @@ def main():
     db = connection[database]
     collections = db.list_collection_names()
 
-    with open('../weapons.csv', 'r') as csvfile:
+    with open('weapons.csv', 'r') as csvfile:
         data = csv.DictReader(csvfile)
         
         for item in data:
