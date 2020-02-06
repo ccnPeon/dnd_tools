@@ -89,7 +89,7 @@ class DNDLiason():
         return_info = ''
         collection = self.db['quests']
         for quest in collection.find({}):
-            if quest['name'] == argument.replace('_', ' ').title(): 
+            if quest['name'] == argument.replace('_', ' ').replace("'", '\'').title(): 
                 return_info += '*=================================%s=================================*\n' % quest['name']
                 return_info += quest['data']
                 return return_info
