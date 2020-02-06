@@ -22,7 +22,7 @@ def main():
             item = dict(item)
 
         # Add document
-            collection.insert_one({'name': item['name', 'data': item['data']})
+            collection.insert_one({'name': item['name'], 'data': item['data']})
 
 
             
