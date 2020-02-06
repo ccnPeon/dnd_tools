@@ -65,14 +65,14 @@ class DNDLiason():
         name_column = '            Name            '
         price_column = '            Price            '
         damage_column = '          Damage          '
-        weight_column = '        Weight             '
+        weight_column = '        Weight        '
         properties_column = '            Properties       '
 
         return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
         for document in current_collection.find({}):
             return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 12) * 2)) \
-                + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 9) * 2)) \
+                + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 15) * 2)) \
                 + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 15) * 2)) \
                 + document['properties'] + '\n'
         return return_info
