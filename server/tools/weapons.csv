@@ -1,0 +1,38 @@
+name,,price,damage,weight,properties,,,,category
+Club,,1 sp,1d4 Bludgeon,2 lb.,Light,,,,melee
+Dagger,,2 gp,1d4 Piercing,1 lb.,"Finesse, Light, Thrown (20/60)",,,,melee
+Greatclub,,2 sp,1d8 Bludgeon,10 lb.,Two-handed,,,,melee
+Handaxe,,5 gp,1d6 Slashing,2 lb.,"Light, Thrown (20/60)",,,,melee
+Javelin,,5 sp,1d6 Piercing,2 lb.,Thrown (30/120),,,,melee
+Light hammer,,2 gp,1d4 Bludgeon,2 lb.,"Light, Thrown (20/60)",,,,melee
+Mace,,5 gp,1d6 Bludgeon,5 lb.,-,,,,melee
+Quarterstaff,,2 sp,1d6 Bludgeon,5 lb.,Versatile (1d8),,,,melee
+Sickle,,1 gp,1d4 Slashing,2 lb.,Light,,,,melee
+Spear,,1 gp,1d4 Piercing,3 lb.,"Thrown (20/60), Versatile (1d8)",,,,melee
+"Crossbow, light",,25 gp,1d6 Piercing,5 lb.,"Ammunition (80/320), Loading, Two-handed",,,,ranged
+Dart,,5 cp,1d4 Piercing,.25 lb.,"Finesse, Thrown (20/60)",,,,ranged
+Shortbow,,25 gp,1d6 Piercing,2 lb.,"Ammunition (80/320), Two-handed",,,,ranged
+Sling,,1 sp,1d4 Bludgeon,-,Ammunition (30/120),,,,ranged
+Battleaxe,,10 gp,1d8 Slashing,4 lb.,Versatile (1d10),,,,melee
+Flail,,10 gp,1d8 Bludgeon,2 lb.,-,,,,melee
+Glaive,,20 gp,1d10 Slashing,6 lb.,"Heavy, Reach, Two-handed",,,,melee
+Greataxe,,30 gp,1d12 Slashing,7 lb.,"Heavy, Two-handed",,,,melee
+Greatsword,,50 gp,2d6 Slashing,6 lb.,"Heavy, Two-handed",,,,melee
+Halberd,,20 gp,1d10 Slashing,6 lb.,"Heavy, Reach, Two-handed",,,,melee
+Lance,,10 gp,1d12 Piercing,6 lb.,"Reach, Special",,,,melee
+Longsword,,15 gp,1d8 Slashing,3 lb.,Versatile (1d10),,,,melee
+Maul,,10 gp,2d6 Bludgeon,10 lb.,"Heavy, Two-handed",,,,melee
+Morningstar,,15 gp,1d8 Piercing,4 lb.,-,,,,melee
+Pike,,5 gp,1d10 Piercing,18 lb.,"Heavy, Reach, Two-handed",,,,melee
+Rapier,,25 gp,1d8 Piercing,2 lb.,Finesse,,,,melee
+Scimitar,,25 gp,1d6 Slashing,3 lb.,"Finesse, Light",,,,melee
+Shortsword,,10 gp,1d6 Slashing,2 lb.,"Finesse, Light",,,,melee
+Trident,,5 gp,1d6 Piercing,5 lb.,"Thrown (20/60), Versatile (1d8)",,,,melee
+War pick,,5 gp,1d8 Piercing,2 lb.,-,,,,melee
+Warhammer,,15 gp,1d8 Bludgeon,2 lb.,Versatile (1d10),,,,melee
+Whip,,2 gp,1d4 Slashing,3 lb.,"Finesse, Reach",,,,melee
+Blowgun,,10 gp,1 Piercing,1 lb.,"Ammunition (25/100), Loading",,,,ranged
+"Crossbow, hand",,75 gp,1d6 Piercing,3 lb.,"Ammunition (30/120), Loading, Light",,,,ranged
+"Crossbow, heavy",,50 gp,1d10 Piercing,18 lb.,"Ammunition (100/400), Loading, Two-handed, Heavy",,,,ranged
+Longbow,,50 gp,1d8 Piercing,2 lb.,"Ammunition (150/600), Heavy, Two-handed",,,,ranged
+Net,,1 gp,-,3 lb.,"Special, Thrown (5/15)",,,,ranged
