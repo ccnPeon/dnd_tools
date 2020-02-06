@@ -13,7 +13,7 @@ def main():
     connection = MongoClient(server,username=username,password=password,authSource=database)
     
     db = connection[database]
-    collections = db.list_collection_names()
+    collection = db['quests']
 
     with open('quests.csv', 'r') as csvfile:
         data = csv.DictReader(csvfile)
