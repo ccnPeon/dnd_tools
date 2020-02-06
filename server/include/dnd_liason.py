@@ -72,7 +72,7 @@ class DNDLiason():
         for document in current_collection.find({}):
             return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 12) * 2)) \
-                + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 6) * 2)) \
+                + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 9) * 2)) \
                 + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 12) * 2)) \
                 + document['properties'] + '\n'
         return return_info
