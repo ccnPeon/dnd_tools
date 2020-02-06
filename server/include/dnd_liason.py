@@ -64,8 +64,8 @@ class DNDLiason():
         return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
         name_column = '            Name            '
         price_column = '            Price            '
-        damage_column = '            Damage            '
-        weight_column = '            Weight            '
+        damage_column = '          Damage          '
+        weight_column = '        Weight        '
         properties_column = '            Properties            '
 
         return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
