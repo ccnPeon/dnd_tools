@@ -74,7 +74,7 @@ class DNDLiason():
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 12) * 2)) \
                 + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 6) * 2)) \
                 + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 12) * 2)) \
-                + document['properties'] + (' '*((len(properties_column) - len(document['properties']) - 2) * 2)) + '\n'
+                + document['properties'] + '\n'
         return return_info
 
     def get_quest_options(self):
