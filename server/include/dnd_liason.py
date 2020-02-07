@@ -112,7 +112,7 @@ class DNDLiason():
         for item in self.db.collection_names():
             if 'armor.' in item:
                 return_info += item.replace('armor.', '') + '\n'
-            else
+            else:
                 pass
         return_info += '```'
         return return_info
