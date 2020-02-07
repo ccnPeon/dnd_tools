@@ -136,7 +136,7 @@ class DNDLiason():
         return_info += '%s|%s|%s|%s|%s|%s\n' % (name_column,price_column,armor_class_column,weight_column,stealth_column,strength_column)
         for document in current_collection.find({}):
             return_info += document['name'].ljust(25, ' ')[:26] + '|' + document['price'].center(25, ' ')[:26] + '|' \
-                + document['weight'].center(25, ' ')[:26] + '|' + document['stealth'].center(25, ' ')[:26]
+                + document['weight'].center(25, ' ')[:26] + '|' + document['stealth'].center(25, ' ')[:26] \
                 + document['strength'].center(25, ' ',)[:26] +  '\n'
         return_info += '```'
         return return_info
