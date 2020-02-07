@@ -104,7 +104,7 @@ class DNDLiason():
         stealth_column = '          Stealth        '
         strength_column = '          Strength        '
 
-        return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
+        return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,armor_class_column,weight_column,stealth_column,strength_column)
         for document in current_collection.find({}):
             return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 14) * 2)) \
