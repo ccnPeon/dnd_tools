@@ -77,6 +77,43 @@ class DNDLiason():
                 + document['properties'] + '\n'
         return return_info
 
+    def get_armor_options(self):
+        return_info = ''
+        return_info += '*=================================Armor Choices=================================*\n'
+        for item in self.db.collection_names():
+            if 'armor.' in item:
+                return_info += item.replace('armor.', '') + '\n'
+            else:
+                pass
+        return return_info
+
+
+    def get_armor(self, argument):
+        return_info = ''
+        if argument in self.db.collection_names():
+            current_collection = self.db[argument]
+            collection_name = argument
+        else:
+            return 'Data not found.'
+        collection_name_parsed = collection_name.replace('armor.', '').split('_')
+        return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
+        name_column = '            Name            '
+        price_column = '            Price            '
+        armor_class_column = '          Armor Class          '
+        weight_column = '        Weight        '
+        stealth_column = '          Stealth        '
+        strength_column = '          Strength        '
+
+        return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
+        for document in current_collection.find({}):
+            return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
+                + document['price'] + (' '*((len(price_column) - len(document['price']) - 14) * 2)) \
+                + document['armor_class'] + (' '*((len(armor_class_column) - len(document['armor_class']) - 8) * 2)) \
+                + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 14) * 2)) \
+                + document['stealth'] + (' '*((len(stealth_column) - len(document['stealth']) - 14) * 2)) \
+                + document['strength'] + '\n'
+        return return_info
+
     def get_quest_options(self):
         return_info = ''
         return_info += '*=================================Quest Choices=================================*\n'
