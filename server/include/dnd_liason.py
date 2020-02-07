@@ -60,9 +60,9 @@ class DNDLiason():
                 + str(document['weight']) + '\n'
         return return_info
 
-    def get_item_options(self):
+    def get_tool_options(self):
         return_info = ''
-        return_info += '*=================================Item Choices=================================*\n'
+        return_info += '*=================================Tool Choices=================================*\n'
         for item in self.db.collection_names():
             if 'items.' in item:
                 return_info += item.replace('items.', '') + '\n'
