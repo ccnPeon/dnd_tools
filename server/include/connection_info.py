@@ -1,5 +1,5 @@
 class ConnectionInfo():
-    server = 'mongodb'
+    server = 'localhost'
     port = '27017'
     username = 'dnd'
     password = 'Dnd1234$'
