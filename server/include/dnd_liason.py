@@ -41,6 +41,35 @@ class DNDLiason():
                 pass
         return return_info
 
+    def get_tools(self, argument):
+        return_info = ''
+        if argument in self.db.collection_names():
+            current_collection = self.db[argument]
+            collection_name = argument
+        else:
+            return 'Data not found.'
+        collection_name_parsed = collection_name.replace('tools.', '').split('_')
+        return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
+        name_column = '                    Name                    '
+        price_column = '                    Price                    '
+        weight_column = '                    Weight                    '
+        return_info += '%s|%s|%s\n' % (name_column,price_column,weight_column)
+        for document in current_collection.find({}):
+            return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 2) * 2)) \
+                + document['price'] + (' '*((len(price_column) - len(document['price']) - 2) * 2)) \
+                + str(document['weight']) + '\n'
+        return return_info
+
+    def get_item_options(self):
+        return_info = ''
+        return_info += '*=================================Item Choices=================================*\n'
+        for item in self.db.collection_names():
+            if 'items.' in item:
+                return_info += item.replace('items.', '') + '\n'
+            else:
+                pass
+        return return_info
+
 
     def get_weapon_options(self):
         return_info = ''

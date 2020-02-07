@@ -17,6 +17,10 @@ class GetAllItems(Resource):
                 return_data = {'text': liason.get_item_options()}
                 return return_data, 201
 
+            elif split_data[0] == 'tools':
+                return_data = {'text': liason.get_tool_options()}
+                return return_data, 201
+
             elif split_data[0] == 'weapons':
                 return_data = {'text': liason.get_weapon_options()}
                 return return_data, 201
@@ -33,6 +37,11 @@ class GetAllItems(Resource):
             if split_data[0] == 'items':
                 request_argument = 'items.%s' % split_data[1]
                 return_data = {'text': liason.get_items(request_argument)}
+                return return_data, 201
+
+            elif split_data[0] == 'tools':
+                request_argument = 'tools.%s' % split_data[1]
+                return_data = {'text': liason.get_tools(request_argument)}
                 return return_data, 201
 
             elif split_data[0] == 'weapons':

@@ -1,0 +1,38 @@
+name,,price,weight,
+Alchemist's supplies,,50 gp,8 lb.,artisan
+Brewer's supplies,,20 gp,9 lb.,artisan
+Calligrapher's supplies,,10 gp,5 lb.,artisan
+Carpenter's tools,,8 gp,6 lb.,artisan
+Cartographer's tools,,15 gp,6 lb.,artisan
+Cobbler's tools,,5 gp,5 lb.,artisan
+Cook's utensils,,1 gp,8 lb.,artisan
+Glassblower's tools,,30 gp,5 lb.,artisan
+Jeweler's tools,,25 gp,2 lb.,artisan
+Leatherworker's tools,,5 gp,5 lb.,artisan
+Mason's tools,,10 gp,8 lb.,artisan
+Painter's supplies,,10 gp,5 lb.,artisan
+Potter's tools,,10 gp,3 lb.,artisan
+Smith's tools,,20 gp,8 lb.,artisan
+Tinker's tools,,50 gp,10 lb.,artisan
+Weaver's tools,,1 gp,5 lb.,artisan
+Woodcarver's tools,,1 gp,5 lb.,artisan
+Disguise kit,,25 gp,3 lb.,other
+Forgery kit,,15 gp,5 lb.,other
+Dice set,,1 sp,-,gaming_sets
+Dragonchess set,,1 gp,.5 lb.,gaming_sets
+Playing card set,,5 gp,-,gaming_sets
+Three-Dragon Ante set,,1 gp,-,gaming_sets
+Herbalism kit,,5 gp,3 lb.,other
+Bagpipe,,30 gp,6 lb.,musical_instruments
+Drum,,6 gp,3 lb.,musical_instruments
+Dulcimer,,25 gp,10 lb.,musical_instruments
+Flute,,2 gp,1 lb.,musical_instruments
+Lute,,35 gp,2 lb.,musical_instruments
+Lyre,,30 gp,2 lb.,musical_instruments
+Horn,,3 gp,2 lb.,musical_instruments
+Pan Flute,,12 gp,2 lb.,musical_instruments
+Shawm,,2 gp,1 lb.,musical_instruments
+Viol,,30 gp,1 lb.,musical_instruments
+Navigator's tools,,25 gp,2 lb.,other
+Poisoner's kit,,50 gp,2 lb.,other
+Thieves' tools,,25 gp,1 lb.,other
