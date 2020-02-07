@@ -99,7 +99,7 @@ class DNDLiason():
         return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
         name_column = '            Name            '
         price_column = '            Price            '
-        armor_class_column = '     Armor Class     '
+        armor_class_column = '       Armor Class       '
         weight_column = '       Weight       '
         stealth_column = '              Stealth             '
         strength_column = '          Strength        '
