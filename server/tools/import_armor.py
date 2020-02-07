@@ -31,7 +31,7 @@ def main():
                 if item['weight'] == '-':
                     item['weight'] = 0
                 collection.insert_one({'name': item['name'], 'price': item['price'],
-                    'armor_class': item['armor_class'], 'weight': item['weight'],
+                    'armor_class': item['ac'], 'weight': item['weight'],
                     'stealth': item['stealth'], 'strength': item['strength']})
 
 
