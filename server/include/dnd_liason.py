@@ -47,7 +47,7 @@ class DNDLiason():
             current_collection = self.db[argument]
             collection_name = argument
         else:
-            return 'Data not found.'
+            return 'Data not found. %s' % argument
         collection_name_parsed = collection_name.replace('tools.', '').split('_')
         return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
         name_column = '                    Name                    '
