@@ -100,47 +100,45 @@ class DNDLiason():
         properties_column = 'Properties'.center(25, ' ')
         return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
         for document in current_collection.find({}):
-            return_info += document['name'].ljust(25, ' ')[:51] + '|' + document['price'].center(25, ' ')[:51] + '|' \
-                + document['damage'].center(25, ' ')[:51] + '|' +  document['weight'].center(25, ' ')[:51] \
+            return_info += document['name'].ljust(25, ' ')[:26] + '|' + document['price'].center(25, ' ')[:26] + '|' \
+                + document['damage'].center(25, ' ')[:26] + '|' +  document['weight'].center(25, ' ')[:26] + '|' \
                 + document['properties'].center(25, ' ',) +  '\n'
         return_info += '```'
         return return_info
 
     def get_armor_options(self):
-        return_info = ''
-        return_info += '*=================================Armor Choices=================================*\n'
+        return_info = '```\n'
+        return_info += '=================================Armor Choices=================================\n'
         for item in self.db.collection_names():
             if 'armor.' in item:
                 return_info += item.replace('armor.', '') + '\n'
-            else:
-                pass
+            else
+                pass\
+        return_info += '```'
         return return_info
 
 
     def get_armor(self, argument):
-        return_info = ''
+        return_info = '```\n'
         if argument in self.db.collection_names():
             current_collection = self.db[argument]
             collection_name = argument
         else:
             return 'Data not found.'
         collection_name_parsed = collection_name.replace('armor.', '').split('_')
-        return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
-        name_column = '            Name            '
-        price_column = '            Price            '
-        armor_class_column = '       Armor Class       '
-        weight_column = '       Weight       '
-        stealth_column = '              Stealth             '
-        strength_column = '          Strength        '
+        return_info += '{0}\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize())).center(75, ' ')
+        name_column = 'Name'.center(25, ' ')
+        price_column = 'Price'.center(25, ' ')
+        weight_column = 'Weight'.center(25, ' ')
+        stealth_column = 'stealth'.center(25, ' ')
+        strength_column = 'strength'.center(25, ' ')
 
         return_info += '%s|%s|%s|%s|%s|%s\n' % (name_column,price_column,armor_class_column,weight_column,stealth_column,strength_column)
         for document in current_collection.find({}):
-            return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
-                + document['price'] + (' '*((len(price_column) - len(document['price']) - 14) * 2)) \
-                + document['armor_class'] + (' '*((len(armor_class_column) - len(document['armor_class']) - 6) * 2)) \
-                + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 14) * 2)) \
-                + document['stealth'] + (' '*((len(stealth_column) - len(document['stealth']) - 14) * 2)) \
-                + document['strength'] + '\n'
+            return_info += document['name'].ljust(25, ' ')[:26] + '|' + document['price'].center(25, ' ')[:26] + '|' \
+                + document['weight'].center(25, ' ')[:26] + '|' + document['stealth'].center(25, ' ')[:26]
+                + document['strength'].center(25, ' ',)[:26] +  '\n'
+        return_info += '```'
         return return_info
 
     def get_quest_options(self):
