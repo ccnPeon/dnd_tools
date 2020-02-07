@@ -124,7 +124,7 @@ class DNDLiason():
         else:
             return 'Data not found.'
         collection_name_parsed = collection_name.replace('armor.', '').split('_')
-        return_info += '{0}\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize())).center(75, '=') + '\n'
+        return_info += '{0}'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize())).center(50, '=') + '\n'
         name_column = 'Name'.center(25, ' ')
         price_column = 'Price'.center(25, ' ')
         weight_column = 'Weight'.center(25, ' ')
