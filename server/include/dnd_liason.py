@@ -11,8 +11,6 @@ class DNDLiason():
             )
 
         self.db = self.connection[ConnectionInfo().get_database()]
-        print(self.db)
-        print(self.db.collection_names())
     
     def get_items(self, argument):
         return_info = ''
@@ -130,13 +128,15 @@ class DNDLiason():
         name_column = 'Name'.center(25, ' ')
         price_column = 'Price'.center(25, ' ')
         weight_column = 'Weight'.center(25, ' ')
+        armor_class_column = 'Armor Class'.center(25, ' ')
         stealth_column = 'stealth'.center(25, ' ')
         strength_column = 'strength'.center(25, ' ')
 
         return_info += '%s|%s|%s|%s|%s|%s\n' % (name_column,price_column,armor_class_column,weight_column,stealth_column,strength_column)
         for document in current_collection.find({}):
             return_info += document['name'].ljust(25, ' ')[:26] + '|' + document['price'].center(25, ' ')[:26] + '|' \
-                + document['weight'].center(25, ' ')[:26] + '|' + document['stealth'].center(25, ' ')[:26] \
+                + document['weight'].center(25, ' ')[:26] + '|' + document['armor_class'].center(25, ' ') + '|' \
+                + document['stealth'].center(25, ' ')[:26]  + '|' \
                 + document['strength'].center(25, ' ',)[:26] +  '\n'
         return_info += '```'
         return return_info

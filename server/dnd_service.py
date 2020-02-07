@@ -12,7 +12,6 @@ class GetAllItems(Resource):
         received_data = request.get_data().decode("utf-8")
         parse_data = re.search('dndtools+.*&', received_data).group(0)[9:-1]
         split_data = parse_data.split('+')
-        print(split_data)
         if len(split_data) == 1:
             if split_data[0] == 'items':
                 return_data = {'text': liason.get_item_options()}
