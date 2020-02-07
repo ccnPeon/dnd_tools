@@ -113,7 +113,7 @@ class DNDLiason():
             if 'armor.' in item:
                 return_info += item.replace('armor.', '') + '\n'
             else
-                pass\
+                pass
         return_info += '```'
         return return_info
 
