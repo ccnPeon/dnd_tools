@@ -76,7 +76,7 @@ class DNDLiason():
 
     def get_weapon_options(self):
         return_info = ''
-        return_info += '*=================================Weapon Choices=================================*\n'
+        return_info += '=================================Weapon Choices=================================\n'
         for item in self.db.collection_names():
             if 'weapons.' in item:
                 return_info += item.replace('weapons.', '') + '\n'
