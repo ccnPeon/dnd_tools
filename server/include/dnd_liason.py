@@ -108,7 +108,7 @@ class DNDLiason():
         for document in current_collection.find({}):
             return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
                 + document['price'] + (' '*((len(price_column) - len(document['price']) - 14) * 2)) \
-                + document['armor_class'] + (' '*((len(armor_class_column) - len(document['armor_class']) - 8) * 2)) \
+                + document['armor_class'] + (' '*((len(armor_class_column) - len(document['armor_class']) - 6) * 2)) \
                 + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 14) * 2)) \
                 + document['stealth'] + (' '*((len(stealth_column) - len(document['stealth']) - 14) * 2)) \
                 + document['strength'] + '\n'
