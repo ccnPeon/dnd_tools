@@ -92,7 +92,7 @@ class DNDLiason():
         else:
             return 'Data not found.'
         collection_name_parsed = collection_name.replace('weapons.', '').split('_')
-        return_info += '*============================================{0}============================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
+        return_info += '============================================{0}============================================\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
         name_column = 'Name'.center(40, ' ')
         price_column = 'Price'.center(30, ' ')
         damage_column = 'Damage'.center(30, ' ')
@@ -100,9 +100,9 @@ class DNDLiason():
         properties_column = 'Properties'.center(40, ' ')
         return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
         for document in current_collection.find({}):
-            return_info += document['name'].ljust(50, ' ')[:51] + '|' + document['price'].center(50, ' ')[:51] + '|' \
-                + document['damage'].center(50, ' ')[:51] + '|' +  document['weight'].center(50, ' ')[:51] \
-                + document['properties'].center(50, ' ',) +  '\n'
+            return_info += document['name'].ljust(40, ' ')[:51] + '|' + document['price'].center(30, ' ')[:51] + '|' \
+                + document['damage'].center(30, ' ')[:51] + '|' +  document['weight'].center(30, ' ')[:51] \
+                + document['properties'].center(40, ' ',) +  '\n'
         return_info += '```'
         return return_info
 
