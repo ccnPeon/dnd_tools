@@ -1,0 +1,14 @@
+name,,price,ac,weight,stealth,,strength,,category
+Padded,,5 gp,11 + Dex,8 lb.,Disadvantage,,,,light
+Leather,,10 gp,11 + Dex,10 lb.,,,,,light
+Studded Leather,,45 gp,12 + Dex,13 lb.,,,,,light
+Hide,,10 gp,12 + Dex(max2),12 lb.,,,,,medium
+Chain Shirt,,50 gp,13 + Dex(max2),20 lb.,,,,,medium
+Scail Mail,,50 gp,14 + Dex(max2),45 lb.,Disadvantage,,,,medium
+Breastplate,,400 gp,14 + Dex(max2),20 lb.,,,,,medium
+Half Plate,,750 gp,15 + Dex(max2),40 lb.,Disadvantage,,,,medium
+Ring Mail,,30 gp,14,40 lb.,Disadvantage,,,,heavy
+Chain Mail,,75 gp,16,55 lb.,Disadvantage,,Required Strength 13,,heavy
+Splint,,200 gp,17,60 lb.,Disadvantage,,Required Strength 15,,heavy
+Plate,,1500 gp,18,65 lb.,Disadvantage,,Required Strength 15,,heavy
+Shield,,10 gp,,6 lb.,,,,,shields
