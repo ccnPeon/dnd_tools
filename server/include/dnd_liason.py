@@ -64,8 +64,8 @@ class DNDLiason():
         return_info = ''
         return_info += '*=================================Tool Choices=================================*\n'
         for item in self.db.collection_names():
-            if 'items.' in item:
-                return_info += item.replace('items.', '') + '\n'
+            if 'tools.' in item:
+                return_info += item.replace('tools.', '') + '\n'
             else:
                 pass
         return return_info
