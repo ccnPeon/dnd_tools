@@ -52,15 +52,12 @@ class DNDLiason():
         else:
             return 'Data not found. %s'
         collection_name_parsed = collection_name.replace('tools.', '').split('_')
-        return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
+        return_info += '============================================{0}============================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
         name_column = 'Name'.center(50, ' ')
         price_column = 'Price'.center(50, ' ')
         weight_column = 'Weight'.center(50, ' ')
         return_info += '%s|%s|%s\n' % (name_column, price_column, weight_column)
         for document in current_collection.find({}):
-            # return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 2) * 2)) \
-            #     + document['price'] + (' '*((len(price_column) - len(document['price']) - 2) * 2)) \
-            #     + str(document['weight']) + '\n'
             return_info += document['name'].ljust(50, ' ')[:51] + '|' + document['price'].center(50, ' ')[:51] + '|' \
                            + document['weight'].center(50, ' ')[:51] + '\n'
         return_info += '```'
@@ -89,27 +86,26 @@ class DNDLiason():
 
 
     def get_weapons(self, argument):
-        return_info = ''
+        return_info = '```\n'
         if argument in self.db.collection_names():
             current_collection = self.db[argument]
             collection_name = argument
         else:
             return 'Data not found.'
         collection_name_parsed = collection_name.replace('weapons.', '').split('_')
-        return_info += '*======================================={0}=======================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
-        name_column = '            Name            '
-        price_column = '            Price            '
-        damage_column = '          Damage          '
-        weight_column = '        Weight        '
-        properties_column = '            Properties       '
+        return_info += '============================================{0}============================================*\n'.format(((collection_name_parsed[0].capitalize() + ' ' + collection_name_parsed[1].capitalize()) if len(collection_name_parsed) == 2 else collection_name_parsed[0].capitalize()))
+        name_column = 'Name'.center(50, ' ')
+        price_column = 'Price'.center(50, ' ')
+        damage_column = 'Damage'.center(50, ' ')
+        weight_column = 'Weight'.center(50, ' ')
+        properties_column = 'Properties'.center(50, ' ')
 
         return_info += '%s|%s|%s|%s|%s\n' % (name_column,price_column,damage_column,weight_column,properties_column)
         for document in current_collection.find({}):
-            return_info += document['name'] + (' '*((len(name_column) - len(document['name']) - 6) * 2)) \
-                + document['price'] + (' '*((len(price_column) - len(document['price']) - 14) * 2)) \
-                + document['damage'] + (' '*((len(damage_column) - len(document['damage']) - 8) * 2)) \
-                + str(document['weight']) + (' '*((len(price_column) - len(str(document['weight'])) - 14) * 2)) \
-                + document['properties'] + '\n'
+            return_info += document['name'].ljust(50, ' ')[:51] + '|' + document['price'].center(50, ' ')[:51] + '|' \
+                + document['damage'].center(50, ' ')[:51] + '|' +  document['weight'].center(50, ' ')[:51] \
+                + document['properties'].center(50, ' ',) +  '\n'
+        return_info += '```'
         return return_info
 
     def get_armor_options(self):
