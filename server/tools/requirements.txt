@@ -9,7 +9,7 @@ Flask==1.1.1
 Flask-RESTful==0.3.7
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.11.1
+Jinja2==2.11.3
 MarkupSafe==1.1.1
 multidict==4.7.4
 numpy==1.18.1
